@@ -13,6 +13,11 @@
 		CF81510E27EC4D6200556F76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF81510C27EC4D6200556F76 /* Main.storyboard */; };
 		CF81511027EC4D6300556F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF81510F27EC4D6300556F76 /* Assets.xcassets */; };
 		CF81511327EC4D6300556F76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF81511127EC4D6300556F76 /* LaunchScreen.storyboard */; };
+		CF81511B27EC4DB800556F76 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CF81511A27EC4DB800556F76 /* MobileNetV2.mlmodel */; };
+		CF81511D27EC4DC700556F76 /* dog1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF81511C27EC4DC700556F76 /* dog1.jpeg */; };
+		CF81511F27EC4DD000556F76 /* bird2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF81511E27EC4DD000556F76 /* bird2.jpeg */; };
+		CF81512127EC57FF00556F76 /* bird1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF81512027EC57FF00556F76 /* bird1.jpeg */; };
+		CF81512327EC585C00556F76 /* car1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF81512227EC585C00556F76 /* car1.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		CF81510F27EC4D6300556F76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF81511227EC4D6300556F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF81511427EC4D6300556F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF81511A27EC4DB800556F76 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		CF81511C27EC4DC700556F76 /* dog1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog1.jpeg; sourceTree = "<group>"; };
+		CF81511E27EC4DD000556F76 /* bird2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bird2.jpeg; sourceTree = "<group>"; };
+		CF81512027EC57FF00556F76 /* bird1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bird1.jpeg; sourceTree = "<group>"; };
+		CF81512227EC585C00556F76 /* car1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car1.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				CF81510627EC4D6200556F76 /* AppDelegate.swift */,
+				CF81511A27EC4DB800556F76 /* MobileNetV2.mlmodel */,
+				CF81512027EC57FF00556F76 /* bird1.jpeg */,
 				CF81510827EC4D6200556F76 /* SceneDelegate.swift */,
+				CF81511E27EC4DD000556F76 /* bird2.jpeg */,
+				CF81512227EC585C00556F76 /* car1.jpeg */,
+				CF81511C27EC4DC700556F76 /* dog1.jpeg */,
 				CF81510A27EC4D6200556F76 /* ViewController.swift */,
 				CF81510C27EC4D6200556F76 /* Main.storyboard */,
 				CF81510F27EC4D6300556F76 /* Assets.xcassets */,
@@ -125,9 +140,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF81511D27EC4DC700556F76 /* dog1.jpeg in Resources */,
 				CF81511327EC4D6300556F76 /* LaunchScreen.storyboard in Resources */,
+				CF81512127EC57FF00556F76 /* bird1.jpeg in Resources */,
 				CF81511027EC4D6300556F76 /* Assets.xcassets in Resources */,
+				CF81511F27EC4DD000556F76 /* bird2.jpeg in Resources */,
 				CF81510E27EC4D6200556F76 /* Main.storyboard in Resources */,
+				CF81512327EC585C00556F76 /* car1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +159,7 @@
 			files = (
 				CF81510B27EC4D6200556F76 /* ViewController.swift in Sources */,
 				CF81510727EC4D6200556F76 /* AppDelegate.swift in Sources */,
+				CF81511B27EC4DB800556F76 /* MobileNetV2.mlmodel in Sources */,
 				CF81510927EC4D6200556F76 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

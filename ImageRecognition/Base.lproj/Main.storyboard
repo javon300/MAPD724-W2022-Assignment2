@@ -16,30 +16,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfZ-6v-vzE">
-                                <rect key="frame" x="50" y="547" width="315" height="161"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfZ-6v-vzE">
+                                <rect key="frame" x="50" y="450" width="315" height="85"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="1LY-bU-UeJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car1.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="UIY-Yz-ciB">
-                                <rect key="frame" x="50" y="84" width="315" height="400"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="car1.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="UIY-Yz-ciB">
+                                <rect key="frame" x="50" y="44" width="315" height="394"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KZ-Wo-UFV">
+                                <rect key="frame" x="274" y="552" width="120" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="4pd-tY-mgD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Camara"/>
+                                <connections>
+                                    <action selector="camaraPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="unm-vG-zdh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVJ-Q5-E3h">
+                                <rect key="frame" x="50" y="552" width="120" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="kaN-T5-hl2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Photos"/>
+                                <connections>
+                                    <action selector="PhotosBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zRe-hQ-pYz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUt-Rf-OKO">
+                                <rect key="frame" x="50" y="629" width="315" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="habitatBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JHe-9u-1ST"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="sfZ-6v-vzE" firstAttribute="top" secondItem="UIY-Yz-ciB" secondAttribute="bottom" constant="12" id="2KJ-AI-0CZ"/>
+                            <constraint firstItem="sfZ-6v-vzE" firstAttribute="leading" secondItem="lVJ-Q5-E3h" secondAttribute="leading" id="6lC-hZ-GYc"/>
+                            <constraint firstItem="9KZ-Wo-UFV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Lwt-4K-dcb"/>
+                            <constraint firstItem="UIY-Yz-ciB" firstAttribute="leading" secondItem="sfZ-6v-vzE" secondAttribute="leading" id="Prd-uS-zCd"/>
+                            <constraint firstItem="UIY-Yz-ciB" firstAttribute="trailing" secondItem="sfZ-6v-vzE" secondAttribute="trailing" id="RKN-o8-DnY"/>
+                            <constraint firstItem="UIY-Yz-ciB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="SyP-9l-1iQ"/>
+                            <constraint firstItem="lVJ-Q5-E3h" firstAttribute="top" secondItem="sfZ-6v-vzE" secondAttribute="bottom" constant="17" id="Vns-Ib-nQl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lVJ-Q5-E3h" secondAttribute="bottom" constant="279" id="gpJ-cZ-PTg"/>
+                            <constraint firstItem="UIY-Yz-ciB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jNK-dA-Ciu"/>
+                            <constraint firstItem="UIY-Yz-ciB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nN7-2I-Fvl"/>
+                            <constraint firstItem="lVJ-Q5-E3h" firstAttribute="baseline" secondItem="9KZ-Wo-UFV" secondAttribute="baseline" id="wQK-rM-TWY"/>
+                            <constraint firstItem="9KZ-Wo-UFV" firstAttribute="baseline" secondItem="lVJ-Q5-E3h" secondAttribute="firstBaseline" id="zgf-2m-DgK"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="camaraBtn" destination="9KZ-Wo-UFV" id="EfU-3C-dPx"/>
+                        <outlet property="habitatBtn" destination="aUt-Rf-OKO" id="pSr-E6-uyE"/>
                         <outlet property="imageView" destination="UIY-Yz-ciB" id="29p-7L-vPe"/>
                         <outlet property="labelDescription" destination="sfZ-6v-vzE" id="JQD-yx-fpd"/>
+                        <outlet property="photosBtn" destination="lVJ-Q5-E3h" id="hsE-dK-hUY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-120" y="-90"/>
+            <point key="canvasLocation" x="-120.28985507246378" y="-90.401785714285708"/>
         </scene>
     </scenes>
     <resources>

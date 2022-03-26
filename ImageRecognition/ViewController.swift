@@ -17,20 +17,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     @IBOutlet weak var photosBtn: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
+    let sb = UIStoryboard(name: "Main", bundle: nil)
+         
     override func viewDidLoad() {
         super.viewDidLoad()
-        //stores image file
-        let imagePath = Bundle.main.path(forResource: "car1", ofType: "jpeg")
-        let imageURL = NSURL.fileURL(withPath: imagePath!)
-        
-        //setup core ml model for image recognition
-        let modelFile = MobileNetV2()
-        let model = try! VNCoreMLModel(for: modelFile.model)
-     
-        //get result from calling core-ml with image
-        let handler = VNImageRequestHandler(url: imageURL)
-        let request = VNCoreMLRequest(model: model, completionHandler: findResults)
-        try! handler.perform([request])
+       
     }
     
     //find result in core ml
@@ -61,29 +52,48 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         present(imagePickerVC, animated: true)
     }
     
+    //opens camera when pressed
     @IBAction func camaraPressed(_ sender: Any)
     {
         
     }
     
+    //opens map after user
     @IBAction func habitatBtnPressed(_ sender: Any)
     {
-        
+       
     }
-    
-    
     /********************************************************       BUTTON PRESSED FUNCTIONS  END    ****************************************************/
     
+    //controls image picker after image is selected
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
         picker.dismiss(animated: true, completion: nil)
-
+        
+        //sets image view with image
         if let image = info[.originalImage] as? UIImage
         {
             imageView.image = image
         }
     }
+    
+    func identifyImage()
+    {
+        //stores image file
+        let imagePath = Bundle.main.path(forResource: "car1", ofType: "jpeg")
+        let imageURL = NSURL.fileURL(withPath: imagePath!)
+        
+        //setup core ml model for image recognition
+        let modelFile = MobileNetV2()
+        let model = try! VNCoreMLModel(for: modelFile.model)
+     
+        //get result from calling core-ml with image
+        let handler = VNImageRequestHandler(url: imageURL)
+        let request = VNCoreMLRequest(model: model, completionHandler: findResults)
+        try! handler.perform([request])
+    }
 
-
+    
+    
 }
 

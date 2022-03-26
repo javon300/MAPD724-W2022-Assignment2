@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF6072D327EF153C00AF3C50 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6072D227EF153C00AF3C50 /* MapViewController.swift */; };
+		CF6072D527EF17DE00AF3C50 /* habitatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */; };
 		CF81510727EC4D6200556F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81510627EC4D6200556F76 /* AppDelegate.swift */; };
 		CF81510927EC4D6200556F76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81510827EC4D6200556F76 /* SceneDelegate.swift */; };
 		CF81510B27EC4D6200556F76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81510A27EC4D6200556F76 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF6072D227EF153C00AF3C50 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitatViewController.swift; sourceTree = "<group>"; };
 		CF81510327EC4D6200556F76 /* ImageRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF81510627EC4D6200556F76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF81510827EC4D6200556F76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				CF81512227EC585C00556F76 /* car1.jpeg */,
 				CF81511C27EC4DC700556F76 /* dog1.jpeg */,
 				CF81510A27EC4D6200556F76 /* ViewController.swift */,
+				CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */,
+				CF6072D227EF153C00AF3C50 /* MapViewController.swift */,
 				CF81510C27EC4D6200556F76 /* Main.storyboard */,
 				CF81510F27EC4D6300556F76 /* Assets.xcassets */,
 				CF81511127EC4D6300556F76 /* LaunchScreen.storyboard */,
@@ -159,7 +165,9 @@
 			files = (
 				CF81510B27EC4D6200556F76 /* ViewController.swift in Sources */,
 				CF81510727EC4D6200556F76 /* AppDelegate.swift in Sources */,
+				CF6072D527EF17DE00AF3C50 /* habitatViewController.swift in Sources */,
 				CF81511B27EC4DB800556F76 /* MobileNetV2.mlmodel in Sources */,
+				CF6072D327EF153C00AF3C50 /* MapViewController.swift in Sources */,
 				CF81510927EC4D6200556F76 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

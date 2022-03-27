@@ -58,7 +58,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="habitatBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JHe-9u-1ST"/>
-                                    <segue destination="JGA-Xq-lcf" kind="push" identifier="mySegue" id="ITl-0j-VbY"/>
+                                    <segue destination="JGA-Xq-lcf" kind="show" identifier="mySegue" id="ITl-0j-VbY"/>
                                 </connections>
                             </button>
                         </subviews>

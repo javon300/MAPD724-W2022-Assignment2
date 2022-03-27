@@ -10,12 +10,14 @@ import CoreML
 import Vision
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+   
     @IBOutlet weak var labelDescription: UILabel!
-    
     @IBOutlet weak var habitatBtn: UIButton!
     @IBOutlet weak var camaraBtn: UIButton!
     @IBOutlet weak var photosBtn: UIButton!
     @IBOutlet weak var imageView: UIImageView!
+    
+    var details = ""
     
     let sb = UIStoryboard(name: "Main", bundle: nil)
          
@@ -37,12 +39,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
              bestConfidence = classification.confidence
              bestGuess = classification.identifier
           }
+        details = bestGuess
        }
        labelDescription.text = "Image is: \(bestGuess) with confidence \(bestConfidence) out of 1"
+        
+        
     }
     
     
     /********************************************************       BUTTON PRESSED FUNCTIONS   ****************************************************/
+    
+    
     //calls image picker and sets a new image
     @IBAction func PhotosBtnPressed(_ sender: Any)
     {
@@ -67,6 +74,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     }
     /********************************************************       BUTTON PRESSED FUNCTIONS  END    ****************************************************/
     
+    
+    
     //controls image picker after image is selected
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
@@ -80,34 +89,32 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             print("image url" + image.description)
             identifyImage(image: image)
         }
-   
-        
-    }
+    }    
     
+    /********************************************************       IDENTIFY IMAGE FUNCTIONS    ****************************************************/
     func identifyImage(image: UIImage)
     {
-        //stores image file
-        let imagePath = Bundle.main.path(forResource: "bird2", ofType: "jpeg")
-        
-        let imageURL = NSURL.fileURL(withPath: imagePath!)
-        
         //setup core ml model for image recognition
         let modelFile = MobileNetV2()
         let model = try! VNCoreMLModel(for: modelFile.model)
-     
+        
+        //convert UIImage to CIImage
         var newCIImage = CIImage(image: image)!
-        //where image is a UIImage
-        
-//        //get result from calling core-ml with image
-//        let handler = VNImageRequestHandler(url: imageURL)
-//        let request = VNCoreMLRequest(model: model, completionHandler: findResults)
-//        try! handler.perform([request])
-        
-        let handler2 = VNImageRequestHandler(ciImage: newCIImage)
+   
+        //assesses image then sends response
+        let handler = VNImageRequestHandler(ciImage: newCIImage)
         let request = VNCoreMLRequest(model: model, completionHandler: findResults)
-        try! handler2.perform([request])
+        try! handler.perform([request])
     }
-
+    /********************************************************       IDENTIFY IMAGE FUNCTIONS  END    ****************************************************/
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let vc = segue.destination  as! habitatViewController // Get our ColourView
+      
+        vc.passedDetails = details // Pass the colour red to the passedColor varible in ColorView
+       
+        
+    }
     
     
 }

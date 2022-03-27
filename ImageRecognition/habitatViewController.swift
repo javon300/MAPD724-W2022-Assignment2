@@ -13,6 +13,8 @@ class habitatViewController: UIViewController {
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var animalTypeLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    var passedDetails: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +26,7 @@ class habitatViewController: UIViewController {
         
         
        getLocation(query: querry,locat_place: location)
+        detailLabel.text = passedDetails
     }
     func getLocation(query:String, locat_place: CLLocationCoordinate2D)
     {
@@ -39,15 +42,49 @@ class habitatViewController: UIViewController {
         mapView.addAnnotation(annotation)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func animalCheck(animal: String)
+    {
+        if (animal == "cat")
+        {
+        
+        }
+        if (animal == "dog")
+        {
+            
+        }
+        if (animal == "lion")
+        {
+            
+        }
+        if (animal == "tiger")
+        {
+            
+        }
+        if (animal == "aligator")
+        {
+            
+        }
+        if (animal == "crocodile")
+        {
+            
+        }
+        if (animal == "kangaroo")
+        {
+            
+        }
+        
     }
-    */
 
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//           Get the new view controller using segue.destination.
+//           Pass the selected object to the new view controller.
+//      }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+//    {
+//
+//        guard let detailVC = segue.destination as? ViewController else { return }
+//        let details = detailVC.details
+//        detailLabel.text = details
+//    }
 }

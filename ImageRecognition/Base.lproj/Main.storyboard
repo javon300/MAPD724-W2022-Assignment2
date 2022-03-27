@@ -130,6 +130,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="9xS-4g-u4H"/>
+                    <connections>
+                        <outlet property="animalTypeLabel" destination="0pr-pN-bxw" id="iqa-xv-oHi"/>
+                        <outlet property="detailLabel" destination="KRZ-8N-lqm" id="0Gg-sa-2il"/>
+                        <outlet property="mapView" destination="Oe7-Dp-n4N" id="acs-D5-xSL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yc9-4K-iKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -50,6 +50,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         imagePickerVC.sourceType = .photoLibrary
         imagePickerVC.delegate = self // new
         present(imagePickerVC, animated: true)
+        
+        
     }
     
     //opens camera when pressed
@@ -74,23 +76,36 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         if let image = info[.originalImage] as? UIImage
         {
             imageView.image = image
+
+            print("image url" + image.description)
+            identifyImage(image: image)
         }
+   
+        
     }
     
-    func identifyImage()
+    func identifyImage(image: UIImage)
     {
         //stores image file
-        let imagePath = Bundle.main.path(forResource: "car1", ofType: "jpeg")
+        let imagePath = Bundle.main.path(forResource: "bird2", ofType: "jpeg")
+        
         let imageURL = NSURL.fileURL(withPath: imagePath!)
         
         //setup core ml model for image recognition
         let modelFile = MobileNetV2()
         let model = try! VNCoreMLModel(for: modelFile.model)
      
-        //get result from calling core-ml with image
-        let handler = VNImageRequestHandler(url: imageURL)
+        var newCIImage = CIImage(image: image)!
+        //where image is a UIImage
+        
+//        //get result from calling core-ml with image
+//        let handler = VNImageRequestHandler(url: imageURL)
+//        let request = VNCoreMLRequest(model: model, completionHandler: findResults)
+//        try! handler.perform([request])
+        
+        let handler2 = VNImageRequestHandler(ciImage: newCIImage)
         let request = VNCoreMLRequest(model: model, completionHandler: findResults)
-        try! handler.perform([request])
+        try! handler2.perform([request])
     }
 
     

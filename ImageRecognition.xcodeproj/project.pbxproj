@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		617F7E2A27F14C9D00D2F4C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617F7E2927F14C9D00D2F4C1 /* LoginViewController.swift */; };
+		617F7E2C27F157A600D2F4C1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617F7E2B27F157A600D2F4C1 /* HistoryViewController.swift */; };
 		CF6072D327EF153C00AF3C50 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6072D227EF153C00AF3C50 /* MapViewController.swift */; };
 		CF6072D527EF17DE00AF3C50 /* habitatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */; };
 		CF81510727EC4D6200556F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81510627EC4D6200556F76 /* AppDelegate.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		617F7E2927F14C9D00D2F4C1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		617F7E2B27F157A600D2F4C1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		CF6072D227EF153C00AF3C50 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitatViewController.swift; sourceTree = "<group>"; };
 		CF81510327EC4D6200556F76 /* ImageRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +88,8 @@
 				CF81510F27EC4D6300556F76 /* Assets.xcassets */,
 				CF81511127EC4D6300556F76 /* LaunchScreen.storyboard */,
 				CF81511427EC4D6300556F76 /* Info.plist */,
+				617F7E2927F14C9D00D2F4C1 /* LoginViewController.swift */,
+				617F7E2B27F157A600D2F4C1 /* HistoryViewController.swift */,
 			);
 			path = ImageRecognition;
 			sourceTree = "<group>";
@@ -163,12 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				617F7E2A27F14C9D00D2F4C1 /* LoginViewController.swift in Sources */,
 				CF81510B27EC4D6200556F76 /* ViewController.swift in Sources */,
 				CF81510727EC4D6200556F76 /* AppDelegate.swift in Sources */,
 				CF6072D527EF17DE00AF3C50 /* habitatViewController.swift in Sources */,
 				CF81511B27EC4DB800556F76 /* MobileNetV2.mlmodel in Sources */,
 				CF6072D327EF153C00AF3C50 /* MapViewController.swift in Sources */,
 				CF81510927EC4D6200556F76 /* SceneDelegate.swift in Sources */,
+				617F7E2C27F157A600D2F4C1 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -87,7 +87,7 @@ class habitatViewController: UIViewController {
             let about = "Most commonly found in African jungles. They are present in other regions also such as australia"
             detailLabel.text = about
         }
-        else if (name.contains("aligator"))
+        else if (name.contains("alligator"))
         {
             animalType = "aligator"
             animalTypeLabel.text = animalType

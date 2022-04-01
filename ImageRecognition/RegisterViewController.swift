@@ -17,38 +17,38 @@
 import UIKit
 import FirebaseAuth
 
-
-class LoginViewController: UIViewController {
-
-    @IBOutlet weak var registerTf: UITextField!
+class RegisterViewController: UIViewController
+{
+    //variable declacrations
+    @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var passwordTv: UITextField!
     @IBOutlet weak var emailTv: UITextField!
-    @IBOutlet weak var loginBtn: UIButton!
-    private var email: String = ""
-    private var passworrd: String = ""
+    
+    var email: String = ""
+    var password: String = ""
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
     }
     
-    
-    @IBAction func loginBtnPressed(_ sender: Any)
+    //button action
+    @IBAction func registerBtnPressed(_ sender: Any)
     {
         //get password and email from user
         email = emailTv.text! as String
-        passworrd = passwordTv.text! as String
+        password = passwordTv.text! as String
         
         //varify user in firebase
-        loginUser(email: email, password: passworrd)
+        registerUser(email: email, password: password)
     }
     
-    
-    func loginUser(email: String, password: String)
+    //function that connects to firebase
+    func registerUser(email: String, password: String)
     {
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-          guard let strongSelf = self else { return }
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+          // ...
         }
-        print("user signedInsuccessfully")
     }
 }

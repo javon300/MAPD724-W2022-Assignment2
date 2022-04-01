@@ -11,6 +11,7 @@
 		8134A39E1265DB438D4EBC90 /* Pods_ImageRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80326DC6434946093FECE2D0 /* Pods_ImageRecognition.framework */; };
 		CF2169B627F636BD00DB0D51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2169B527F636BD00DB0D51 /* GoogleService-Info.plist */; };
 		CF4DC2A327F65DA400DDBA9C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DC2A227F65DA400DDBA9C /* LoginViewController.swift */; };
+		CF4DC2A527F6CAA000DDBA9C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DC2A427F6CAA000DDBA9C /* RegisterViewController.swift */; };
 		CF6072D327EF153C00AF3C50 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6072D227EF153C00AF3C50 /* MapViewController.swift */; };
 		CF6072D527EF17DE00AF3C50 /* habitatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */; };
 		CF81510727EC4D6200556F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81510627EC4D6200556F76 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 		8E7602012BB832A9B70E56AC /* Pods-ImageRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageRecognition.release.xcconfig"; path = "Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition.release.xcconfig"; sourceTree = "<group>"; };
 		CF2169B527F636BD00DB0D51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CF4DC2A227F65DA400DDBA9C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CF4DC2A427F6CAA000DDBA9C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CF6072D227EF153C00AF3C50 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitatViewController.swift; sourceTree = "<group>"; };
 		CF81510327EC4D6200556F76 /* ImageRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 				CF2169B527F636BD00DB0D51 /* GoogleService-Info.plist */,
 				617F7E2B27F157A600D2F4C1 /* HistoryViewController.swift */,
 				CF4DC2A227F65DA400DDBA9C /* LoginViewController.swift */,
+				CF4DC2A427F6CAA000DDBA9C /* RegisterViewController.swift */,
 			);
 			path = ImageRecognition;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4DC2A527F6CAA000DDBA9C /* RegisterViewController.swift in Sources */,
 				CF81510B27EC4D6200556F76 /* ViewController.swift in Sources */,
 				CF81510727EC4D6200556F76 /* AppDelegate.swift in Sources */,
 				CF6072D527EF17DE00AF3C50 /* habitatViewController.swift in Sources */,

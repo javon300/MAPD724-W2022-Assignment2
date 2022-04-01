@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cNm-sA-rHu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cNm-sA-rHu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -196,10 +196,10 @@
             </objects>
             <point key="canvasLocation" x="1468" y="-194"/>
         </scene>
-        <!--Login View Contoller-->
+        <!--Login View Controller-->
         <scene sceneID="uBy-WL-1Vu">
             <objects>
-                <viewController id="JCu-8n-41f" customClass="LoginViewContoller" sceneMemberID="viewController">
+                <viewController id="JCu-8n-41f" customClass="LoginViewController" customModule="ImageRecognition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sFV-6T-NRW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,6 +288,7 @@
                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="loginBtnPressed:" destination="JCu-8n-41f" eventType="touchUpInside" id="rgg-LI-C6u"/>
                                             <segue destination="6eC-pV-nIo" kind="show" id="0oe-tp-CqN"/>
                                         </connections>
                                     </button>
@@ -349,6 +350,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dth-UV-MTQ"/>
+                    <connections>
+                        <outlet property="emailTv" destination="GOr-mz-zWM" id="hRV-g4-aa1"/>
+                        <outlet property="loginBtn" destination="Sqb-5j-FNJ" id="ifG-gw-qdp"/>
+                        <outlet property="passwordTv" destination="zAe-Z6-CAZ" id="EW7-Ux-Wyr"/>
+                        <outlet property="registerTf" destination="OhY-l5-bkK" id="0BV-Ik-FyU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgc-2n-09k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

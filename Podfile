@@ -10,5 +10,6 @@ target 'ImageRecognition' do
   #pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'MaterialComponents/BottomAppBar'
 
 end

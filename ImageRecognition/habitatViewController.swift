@@ -17,6 +17,7 @@
 
 import UIKit
 import MapKit
+import FirebaseFirestore
 
 class habitatViewController: UIViewController {
 
@@ -30,19 +31,24 @@ class habitatViewController: UIViewController {
     var animalType: String = ""
     var details: String = ""
     
-    override func viewDidLoad() {
+    var location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+    var querry = ""
+    
+    @Published var animalData: String = ""
+    
+    
+
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        
-        
-        // vals
-        let location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
-        let querry = "canada"
         
         //checks for animal name in string
         checkForAnimal(name: passedDetails)
-        
-       getLocation(query: querry,locat_place: location)
+        //readFromDatabase()
+       //getLocation(query: querry,locat_place: location)
     }
+    
+    
     func getLocation(query:String, locat_place: CLLocationCoordinate2D)
     {
         // 2
@@ -57,6 +63,7 @@ class habitatViewController: UIViewController {
         mapView.addAnnotation(annotation)
     }
     
+    
     func checkForAnimal(name: String)
     {
         if (name.contains("cat"))
@@ -65,6 +72,11 @@ class habitatViewController: UIViewController {
             animalTypeLabel.text = animalType
             let about = "the household cat. Probably found in your house if not, its in your neighbour's house"
             detailLabel.text = about
+            
+            // location
+            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            querry = "canada"
+            
         }
         else if (name.contains("dog"))
         {
@@ -72,27 +84,34 @@ class habitatViewController: UIViewController {
             animalTypeLabel.text = animalType
             let about = "the household dog. Probably found in your house if not, its in your neighbour's house"
             detailLabel.text = about
+            
+            // location
+            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            querry = "canada"
         }
         else if (name.contains("lion"))
         {
-            animalType = "lion"
-            animalTypeLabel.text = animalType
-            let about = "Most commonly found in African jungles. They are present in other regions also such as australia"
-            detailLabel.text = about
+            readFromDatabase(name: "lion")
+            
+            // location
+            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            querry = "Africa"
         }
         else if (name.contains("tiger"))
         {
-            animalType = "tiger"
-            animalTypeLabel.text = animalType
-            let about = "Most commonly found in African jungles. They are present in other regions also such as australia"
-            detailLabel.text = about
+            readFromDatabase(name: "tiger")
+            
+            // location
+            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            querry = "Africa"
         }
         else if (name.contains("alligator"))
         {
-            animalType = "aligator"
-            animalTypeLabel.text = animalType
-            let about = "Most commonly found in African jungles. They are present in other regions also such as australia"
-            detailLabel.text = about
+            readFromDatabase(name: "alligator")
+            
+            // location
+            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            querry = "America"
         }
         else if (name.contains("crocodile"))
         {
@@ -100,6 +119,10 @@ class habitatViewController: UIViewController {
             animalTypeLabel.text = animalType
             let about = "Most commonly found in African jungles. They are present in other regions also such as australia"
             detailLabel.text = about
+            
+            // location
+            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            querry = "Caribbean"
         }
         else if (name.contains("kangaroo"))
         {
@@ -107,6 +130,10 @@ class habitatViewController: UIViewController {
             animalTypeLabel.text = animalType
             let about = "Most commonly found in Australia grasslands. They are present in other regions also such as Africa"
             detailLabel.text = about
+            
+            // location
+            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            querry = "Australia"
         }
         else
         {
@@ -115,8 +142,34 @@ class habitatViewController: UIViewController {
             let about = "The image you entered is not a registered animal please upload a different picture of an animal"
             detailLabel.text = about
         }
-        
     }
+    
+    
+    //read from database
+    func readFromDatabase(name: String)
+    {
+        let db = Firestore.firestore()
+
+        let docRef = db.collection("AnimalFinder")//.document("searches")
+        
+        let query = docRef.whereField("name", isEqualTo: name)
+            .getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            let animType = document.get("name") as! String
+                            let animData = document.get("about") as! String
+                            
+                            //sets data in respective labels
+                            self.animalTypeLabel.text = animType
+                            self.detailLabel.text = animData
+                            //print("\(document.documentID) => \(document.data())")
+                        }
+                    }
+            }
+    
+        }
 
   
 }

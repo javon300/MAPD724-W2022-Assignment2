@@ -20,6 +20,7 @@
 import UIKit
 import CoreML
 import Vision
+import MaterialComponents.MaterialBottomAppBar
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
    
@@ -76,7 +77,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     //opens camera when pressed
     @IBAction func camaraPressed(_ sender: Any)
     {
-        
+        openCamera()
     }
     
     //opens map after user
@@ -101,9 +102,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             print("image url" + image.description)
             identifyImage(image: image)
         }
-    }    
+        if let img = info[UIImagePickerController.InfoKey.editedImage] as?
+        UIImage {
+              self.imageView.image = img
+              self.dismiss(animated: true, completion: nil)
+           }
+           else {
+              print("error")
+           }
+    }
+    
+   
     
     /********************************************************       IDENTIFY IMAGE FUNCTIONS    ****************************************************/
+    
+    //image picker
     func identifyImage(image: UIImage)
     {
         //setup core ml model for image recognition
@@ -118,7 +131,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         let request = VNCoreMLRequest(model: model, completionHandler: findResults)
         try! handler.perform([request])
     }
+    
+    //camera open
+    @objc func openCamera()
+    {
+        let imgPicker = UIImagePickerController()
+        imgPicker.delegate = self
+        imgPicker.sourceType = .camera
+        imgPicker.allowsEditing = false
+        imgPicker.showsCameraControls = true
+        self.present(imgPicker, animated: true, completion: nil)
+    }
+    
+    
+    
     /********************************************************       IDENTIFY IMAGE FUNCTIONS  END    ****************************************************/
+    
+    
+    //data passed using segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let vc = segue.destination  as! habitatViewController // Get our ColourView

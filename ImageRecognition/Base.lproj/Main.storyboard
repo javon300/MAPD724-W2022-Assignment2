@@ -223,7 +223,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5RB-rq-1rc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.78813627577319589" green="0.78813627577319589" blue="0.78813627577319589" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q70-M3-dZP"/>
                 </viewController>
@@ -506,7 +506,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jpB-tv-Mke"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.81632570876288657" green="0.81632570876288657" blue="0.81632570876288657" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="ctq-JH-NiN"/>
                 </viewController>
@@ -522,22 +522,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="help page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yz-zJ-cax">
-                                <rect key="frame" x="151" y="357" width="76" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instruction_2" translatesAutoresizingMaskIntoConstraints="NO" id="qoo-KY-K7t">
+                                <rect key="frame" x="20" y="490" width="374" height="387"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Belos  are labels which illustrate how the app is used" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNg-yg-Mod">
+                                <rect key="frame" x="20" y="72" width="374" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="instruction_1" translatesAutoresizingMaskIntoConstraints="NO" id="EpC-ox-7oY">
+                                <rect key="frame" x="20" y="143" width="374" height="339"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qXx-ZT-ByY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.83567574097938147" green="0.83567574097938147" blue="0.83567574097938147" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="xYt-lV-ysj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKa-E8-KzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180" y="507"/>
+            <point key="canvasLocation" x="-200.00000000000003" y="520.98214285714289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Vj-bA-uJb">
@@ -564,6 +572,8 @@
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="info" catalog="system" width="93" height="128"/>
+        <image name="instruction_1" width="634" height="1294"/>
+        <image name="instruction_2" width="628" height="1274"/>
         <image name="marten" width="259" height="194"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">

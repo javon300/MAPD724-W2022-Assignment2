@@ -24,6 +24,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTv: UITextField!
     @IBOutlet weak var emailTv: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
+    
+    
     private var email: String = ""
     private var passworrd: String = ""
     
@@ -42,6 +44,10 @@ class LoginViewController: UIViewController {
         //varify user in firebase
         loginUser(email: email, password: passworrd)
     }
+    
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue)
+    {}
+
     
     
     func loginUser(email: String, password: String)

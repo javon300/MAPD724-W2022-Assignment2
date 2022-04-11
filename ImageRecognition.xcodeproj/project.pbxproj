@@ -21,6 +21,8 @@
 		CF81511027EC4D6300556F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF81510F27EC4D6300556F76 /* Assets.xcassets */; };
 		CF81511327EC4D6300556F76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF81511127EC4D6300556F76 /* LaunchScreen.storyboard */; };
 		CF81511B27EC4DB800556F76 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CF81511A27EC4DB800556F76 /* MobileNetV2.mlmodel */; };
+		CFB45A252803DA4900584CA6 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB45A242803DA4900584CA6 /* HelpViewController.swift */; };
+		CFB45A272803DA8400584CA6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB45A262803DA8400584CA6 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		CF81511227EC4D6300556F76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF81511427EC4D6300556F76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF81511A27EC4DB800556F76 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		CFB45A242803DA4900584CA6 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		CFB45A262803DA8400584CA6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,18 +108,20 @@
 			children = (
 				CF4DC2A627F6DC0C00DDBA9C /* model */,
 				CF81510627EC4D6200556F76 /* AppDelegate.swift */,
-				CF81511A27EC4DB800556F76 /* MobileNetV2.mlmodel */,
 				CF81510827EC4D6200556F76 /* SceneDelegate.swift */,
-				CF81510A27EC4D6200556F76 /* ViewController.swift */,
 				CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */,
-				CF81510C27EC4D6200556F76 /* Main.storyboard */,
-				CF81510F27EC4D6300556F76 /* Assets.xcassets */,
-				CF81511127EC4D6300556F76 /* LaunchScreen.storyboard */,
-				CF81511427EC4D6300556F76 /* Info.plist */,
-				CF2169B527F636BD00DB0D51 /* GoogleService-Info.plist */,
-				617F7E2B27F157A600D2F4C1 /* HistoryViewController.swift */,
 				CF4DC2A227F65DA400DDBA9C /* LoginViewController.swift */,
 				CF4DC2A427F6CAA000DDBA9C /* RegisterViewController.swift */,
+				CF81510A27EC4D6200556F76 /* ViewController.swift */,
+				617F7E2B27F157A600D2F4C1 /* HistoryViewController.swift */,
+				CFB45A242803DA4900584CA6 /* HelpViewController.swift */,
+				CF81510C27EC4D6200556F76 /* Main.storyboard */,
+				CF81511127EC4D6300556F76 /* LaunchScreen.storyboard */,
+				CF81510F27EC4D6300556F76 /* Assets.xcassets */,
+				CF81511A27EC4DB800556F76 /* MobileNetV2.mlmodel */,
+				CF81511427EC4D6300556F76 /* Info.plist */,
+				CF2169B527F636BD00DB0D51 /* GoogleService-Info.plist */,
+				CFB45A262803DA8400584CA6 /* SettingsViewController.swift */,
 			);
 			path = ImageRecognition;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 			files = (
 				CF4DC2A527F6CAA000DDBA9C /* RegisterViewController.swift in Sources */,
 				CF81510B27EC4D6200556F76 /* ViewController.swift in Sources */,
+				CFB45A272803DA8400584CA6 /* SettingsViewController.swift in Sources */,
 				CF81510727EC4D6200556F76 /* AppDelegate.swift in Sources */,
 				CF6072D527EF17DE00AF3C50 /* habitatViewController.swift in Sources */,
 				CF81511B27EC4DB800556F76 /* MobileNetV2.mlmodel in Sources */,
@@ -246,6 +253,7 @@
 				CF4DC2A827F6DC3100DDBA9C /* search.swift in Sources */,
 				CF81510927EC4D6200556F76 /* SceneDelegate.swift in Sources */,
 				617F7E2C27F157A600D2F4C1 /* HistoryViewController.swift in Sources */,
+				CFB45A252803DA4900584CA6 /* HelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

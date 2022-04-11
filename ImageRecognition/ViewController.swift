@@ -36,9 +36,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
          
     override func viewDidLoad() {
         super.viewDidLoad()
-       
     }
-    
     //find result in core ml
     func findResults(request: VNRequest, error: Error?) {
        guard let results = request.results as?
@@ -150,13 +148,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
     
     //data passed using segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "habitatSegue"{
+               if let nextViewController = segue.destination as? habitatViewController{
+                   nextViewController.passedDetails = details
+               }
+           }
         
-        let vc = segue.destination  as! habitatViewController // Get our ColourView
-      
-        vc.passedDetails = details // Pass the colour red to the passedColor varible in ColorView
        
         
     }
+    
+    
     
     
 }

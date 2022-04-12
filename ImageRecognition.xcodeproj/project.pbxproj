@@ -12,7 +12,7 @@
 		CF2169B627F636BD00DB0D51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF2169B527F636BD00DB0D51 /* GoogleService-Info.plist */; };
 		CF4DC2A327F65DA400DDBA9C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DC2A227F65DA400DDBA9C /* LoginViewController.swift */; };
 		CF4DC2A527F6CAA000DDBA9C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DC2A427F6CAA000DDBA9C /* RegisterViewController.swift */; };
-		CF4DC2A827F6DC3100DDBA9C /* search.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DC2A727F6DC3100DDBA9C /* search.swift */; };
+		CF59EDEE2805FBEE007E1DA0 /* SearchedHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59EDED2805FBEE007E1DA0 /* SearchedHistoryViewController.swift */; };
 		CF6072D527EF17DE00AF3C50 /* habitatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */; };
 		CF81510727EC4D6200556F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81510627EC4D6200556F76 /* AppDelegate.swift */; };
 		CF81510927EC4D6200556F76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81510827EC4D6200556F76 /* SceneDelegate.swift */; };
@@ -23,6 +23,9 @@
 		CF81511B27EC4DB800556F76 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CF81511A27EC4DB800556F76 /* MobileNetV2.mlmodel */; };
 		CFB45A252803DA4900584CA6 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB45A242803DA4900584CA6 /* HelpViewController.swift */; };
 		CFB45A272803DA8400584CA6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB45A262803DA8400584CA6 /* SettingsViewController.swift */; };
+		CFB45A292803F90000584CA6 /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB45A282803F90000584CA6 /* SearchItem.swift */; };
+		CFB45A2B2803F96B00584CA6 /* userFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB45A2A2803F96B00584CA6 /* userFirebase.swift */; };
+		CFB45A2D2803FA1B00584CA6 /* userService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB45A2C2803FA1B00584CA6 /* userService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +36,7 @@
 		CF2169B527F636BD00DB0D51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CF4DC2A227F65DA400DDBA9C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CF4DC2A427F6CAA000DDBA9C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		CF4DC2A727F6DC3100DDBA9C /* search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = search.swift; sourceTree = "<group>"; };
+		CF59EDED2805FBEE007E1DA0 /* SearchedHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedHistoryViewController.swift; sourceTree = "<group>"; };
 		CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitatViewController.swift; sourceTree = "<group>"; };
 		CF81510327EC4D6200556F76 /* ImageRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF81510627EC4D6200556F76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +49,9 @@
 		CF81511A27EC4DB800556F76 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		CFB45A242803DA4900584CA6 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		CFB45A262803DA8400584CA6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CFB45A282803F90000584CA6 /* SearchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
+		CFB45A2A2803F96B00584CA6 /* userFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userFirebase.swift; sourceTree = "<group>"; };
+		CFB45A2C2803FA1B00584CA6 /* userService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +86,9 @@
 		CF4DC2A627F6DC0C00DDBA9C /* model */ = {
 			isa = PBXGroup;
 			children = (
-				CF4DC2A727F6DC3100DDBA9C /* search.swift */,
+				CFB45A282803F90000584CA6 /* SearchItem.swift */,
+				CFB45A2A2803F96B00584CA6 /* userFirebase.swift */,
+				CFB45A2C2803FA1B00584CA6 /* userService.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -122,6 +130,7 @@
 				CF81511427EC4D6300556F76 /* Info.plist */,
 				CF2169B527F636BD00DB0D51 /* GoogleService-Info.plist */,
 				CFB45A262803DA8400584CA6 /* SettingsViewController.swift */,
+				CF59EDED2805FBEE007E1DA0 /* SearchedHistoryViewController.swift */,
 			);
 			path = ImageRecognition;
 			sourceTree = "<group>";
@@ -243,14 +252,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF59EDEE2805FBEE007E1DA0 /* SearchedHistoryViewController.swift in Sources */,
 				CF4DC2A527F6CAA000DDBA9C /* RegisterViewController.swift in Sources */,
 				CF81510B27EC4D6200556F76 /* ViewController.swift in Sources */,
+				CFB45A2D2803FA1B00584CA6 /* userService.swift in Sources */,
 				CFB45A272803DA8400584CA6 /* SettingsViewController.swift in Sources */,
+				CFB45A2B2803F96B00584CA6 /* userFirebase.swift in Sources */,
+				CFB45A292803F90000584CA6 /* SearchItem.swift in Sources */,
 				CF81510727EC4D6200556F76 /* AppDelegate.swift in Sources */,
 				CF6072D527EF17DE00AF3C50 /* habitatViewController.swift in Sources */,
 				CF81511B27EC4DB800556F76 /* MobileNetV2.mlmodel in Sources */,
 				CF4DC2A327F65DA400DDBA9C /* LoginViewController.swift in Sources */,
-				CF4DC2A827F6DC3100DDBA9C /* search.swift in Sources */,
 				CF81510927EC4D6200556F76 /* SceneDelegate.swift in Sources */,
 				617F7E2C27F157A600D2F4C1 /* HistoryViewController.swift in Sources */,
 				CFB45A252803DA4900584CA6 /* HelpViewController.swift in Sources */,

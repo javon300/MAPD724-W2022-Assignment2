@@ -7,7 +7,8 @@
 
 import UIKit
 
-struct SearchItem {
+struct SearchItem
+{
     let name: String?
     let about: String?
 }

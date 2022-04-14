@@ -23,4 +23,15 @@ class UserService {
                 }
             }
     }
+    
+//    func delete(){
+//        database.collection("taskList").document("SJIf1KOMqpKLTyOekZFB").delete() { err in
+//            if let err = err {
+//                print("Error removing document: \(err)")
+//            } else {
+//                print("Document successfully removed!")
+//            }
+//        }
+//        
+//    }
 }

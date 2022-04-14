@@ -22,40 +22,33 @@ import FirebaseFirestore
 
 class HistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    let tableView = UITableView()
-    var arr_searched = [SearchItem]()
-    
-    // String table identifier
-   let tasksTableIdentifier = "tasksTable"
-  
-   //db reference
-   var docRef: DocumentReference!
+    var animal:SearchItem?
+
     private var service: UserService?
-       private var allsearches = [SearchItem]() {
-           didSet {
-               DispatchQueue.main.async {
-                   self.searches = self.allsearches
-               }
+    private var allAnimals = [SearchItem]() {
+       didSet {
+           DispatchQueue.main.async {
+               self.animals = self.allAnimals
            }
        }
+    }
 
-       var searches = [SearchItem]() {
-           didSet {
-               DispatchQueue.main.async {
-                   self.tableView.reloadData()
-               }
+    var animals = [SearchItem]() {
+       didSet {
+           DispatchQueue.main.async {
+               self.tableView.reloadData()
            }
        }
-
+    }
+    //loads data from database via userService constructor
     func loadData() {
-             service = UserService()
-             service?.get(collectionID: "AnimalFinder") { animal in
-                 self.allsearches = animal
-             }
-         }
-    
-    
-    
+          service = UserService()
+          service?.get(collectionID: "AnimalFinder") { tasks in
+              self.allAnimals = tasks
+          }
+      }
+    let tableView = UITableView()
+      
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -63,13 +56,11 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.dataSource = self
         tableView.delegate = self
         loadData()
-       // readFromDatabase()
     }
     
-    
-  //********************************* TABLE VIEW SETUP ***************************************
-
-    func setupTableView() {
+    //sets table constraints
+    func setupTableView()
+    {
         view.addSubview(tableView)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.allowsSelection = true
@@ -80,79 +71,35 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return arr_searched.count
-        }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-          let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-          cell.accessoryType = .disclosureIndicator
-          cell.textLabel?.text = arr_searched[indexPath.row].name
-          cell.textLabel?.font = .systemFont(ofSize: 20, weight: .medium)
-          cell.detailTextLabel?.text = arr_searched[indexPath.row].about
-          return cell
-      }
-    
-//    //function renders array on app start up
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-//
-//
-//            //instantiaate reusable cell
-//            var cell = tableView.dequeueReusableCell(withIdentifier: tasksTableIdentifier)
-//            let searched: SearchItem
-//            searched = arr_searched[indexPath.row]
-//            if(cell == nil)
-//            {
-//                //actual instance creation
-//                cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: tasksTableIdentifier)
-//            }
-//
-//            //adds task title to be displayed
-//            cell?.textLabel?.text = searched.name
-//
-//            //adds date as sudtext
-//        cell?.detailTextLabel?.text = searched.about
-//
-////            //adds image to be displayed in cell
-////            let editImage = UIImage(named: "edit")
-////            cell?.imageView?.image = editImage
-//
-//            return cell!
-//        }
-    //********************************* TABLE VIEW SETUP END ***************************************
-    
-//    //read from database
-//    func readFromDatabase()
-//    {
-//        let db = Firestore.firestore()
-//
-//        let docRef = db.collection("AnimalFinder")//.document("searches")
-//
-//        let query = docRef.whereField("searched", isEqualTo: true)
-//            .getDocuments() { (querySnapshot, err) in
-//                    if let err = err {
-//                        print("Error getting documents: \(err)")
-//                    } else {
-//                        for document in querySnapshot!.documents {
-//                            let animType = document.get("name") as! String
-//                            let animData = document.get("about") as! String
-//
-//                            //sets data in respective labels
-//
-//                            self.fillArray(name: animType, about: animData)
-//
-//                            print("\(document.documentID) => \(document.data())")
-//                        }
-//                    }
-//            }
-//
-//        }
-//
-//    func fillArray(name: String, about:String)
-//    {
-//        var searched = SearchItem(name: name, about: about)
-//        arr_searched.append(searched)
-//    }
 
+    //calculates table length based on input count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+            return animals.count
+    }
+    let animalsTableIdentifier = "animalsTable"
+
+
+    //function renders array on app start up
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        //instantiaate reusable cell
+        var cell = tableView.dequeueReusableCell(withIdentifier: animalsTableIdentifier)
+        if(cell == nil)
+        {
+            //actual instance creation
+            cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: animalsTableIdentifier)
+        }
+
+        //adds task title to be displayed
+        cell?.textLabel?.text = animals[indexPath.row].name
+
+        //adds date as sudtext
+        cell?.detailTextLabel?.text = animals[indexPath.row].about
+
+        //adds image to be displayed in cell
+        let editImage = UIImage(named: "marten")
+        cell?.imageView?.image = editImage
+        return cell!
+    }
 }

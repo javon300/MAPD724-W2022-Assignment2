@@ -38,6 +38,7 @@ class SearchedHistoryViewController: UIViewController, UITableViewDelegate, UITa
     
     }
     
+    //****************************** Database functions **************************************
     //read from database
        func readFromDatabase()
        {
@@ -51,24 +52,31 @@ class SearchedHistoryViewController: UIViewController, UITableViewDelegate, UITa
                            print("Error getting documents: \(err)")
                        } else {
                            for document in querySnapshot!.documents {
+                               //get values from firebase
                                let animType = document.get("name") as! String
-                               //print(animType)
                                let animData = document.get("about") as! String
-                               var searched = SearchItem(name: animType, about: animData)
+                               print(animData)
+                            
+                               
+                               //store value to array
+                               let searched = SearchItem(name: animType, about: animData)
                                self.arr_searched.append(searched)
+                               //self.d1 = SearchItem(name: animType, about: animData)
+                              // self.arr_searched.append(self.d1)
                            }
                        }
                }
            print(arr_name.count)
         }
-   
+        //append an item to array
        func fillArray(name: String, about:String)
        {
-           
            var searched = SearchItem(name: name, about: about)
            arr_searched.append(searched)
        }
     
+    
+//***************************** tableview functions *********************************
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arr_searched.count
@@ -87,29 +95,3 @@ class SearchedHistoryViewController: UIViewController, UITableViewDelegate, UITa
     }
 
 }
-//
-//extension SearchedHistoryViewController: UITableViewDelegate
-//{
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("row selected")
-//    }
-//}
-//
-//extension SearchedHistoryViewController: UITableViewDataSource
-//{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return arr_name.count
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-//    {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        print(arr_name[indexPath.row])
-//        cell.textLabel?.text =  arr_name[indexPath.row]
-//        return cell
-//    }
-    
-    
-
-//}

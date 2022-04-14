@@ -123,14 +123,14 @@
 				CF81510A27EC4D6200556F76 /* ViewController.swift */,
 				617F7E2B27F157A600D2F4C1 /* HistoryViewController.swift */,
 				CFB45A242803DA4900584CA6 /* HelpViewController.swift */,
+				CFB45A262803DA8400584CA6 /* SettingsViewController.swift */,
+				CF59EDED2805FBEE007E1DA0 /* SearchedHistoryViewController.swift */,
 				CF81510C27EC4D6200556F76 /* Main.storyboard */,
 				CF81511127EC4D6300556F76 /* LaunchScreen.storyboard */,
 				CF81510F27EC4D6300556F76 /* Assets.xcassets */,
 				CF81511A27EC4DB800556F76 /* MobileNetV2.mlmodel */,
 				CF81511427EC4D6300556F76 /* Info.plist */,
 				CF2169B527F636BD00DB0D51 /* GoogleService-Info.plist */,
-				CFB45A262803DA8400584CA6 /* SettingsViewController.swift */,
-				CF59EDED2805FBEE007E1DA0 /* SearchedHistoryViewController.swift */,
 			);
 			path = ImageRecognition;
 			sourceTree = "<group>";

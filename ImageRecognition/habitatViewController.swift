@@ -68,10 +68,7 @@ class habitatViewController: UIViewController {
     {
         if (name.contains("cat"))
         {
-            animalType = "cat"
-            animalTypeLabel.text = animalType
-            let about = "the household cat. Probably found in your house if not, its in your neighbour's house"
-            detailLabel.text = about
+            readFromDatabase(name: "cat")
             
             // location
             location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
@@ -80,10 +77,7 @@ class habitatViewController: UIViewController {
         }
         else if (name.contains("dog"))
         {
-            animalType = "dog"
-            animalTypeLabel.text = animalType
-            let about = "the household dog. Probably found in your house if not, its in your neighbour's house"
-            detailLabel.text = about
+            readFromDatabase(name: "dog")
             
             // location
             location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
@@ -115,10 +109,7 @@ class habitatViewController: UIViewController {
         }
         else if (name.contains("crocodile"))
         {
-            animalType = "crocodile"
-            animalTypeLabel.text = animalType
-            let about = "Most commonly found in African jungles. They are present in other regions also such as australia"
-            detailLabel.text = about
+            readFromDatabase(name: "crocodile")
             
             // location
             location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
@@ -126,10 +117,7 @@ class habitatViewController: UIViewController {
         }
         else if (name.contains("kangaroo"))
         {
-            animalType = "Kangaroo"
-            animalTypeLabel.text = animalType
-            let about = "Most commonly found in Australia grasslands. They are present in other regions also such as Africa"
-            detailLabel.text = about
+            readFromDatabase(name: "kangaroo")
             
             // location
             location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
@@ -164,7 +152,6 @@ class habitatViewController: UIViewController {
                             //sets data in respective labels
                             self.animalTypeLabel.text = animType
                             self.detailLabel.text = animData
-                            //print("\(document.documentID) => \(document.data())")
                         }
                     }
             }

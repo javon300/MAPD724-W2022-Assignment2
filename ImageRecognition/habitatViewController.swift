@@ -120,7 +120,7 @@ class habitatViewController: UIViewController {
             readFromDatabase(name: "kangaroo")
             
             // location
-            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            location = CLLocationCoordinate2D(latitude: -24.570000,longitude: 137.419998)
             querry = "Australia"
         }
         else

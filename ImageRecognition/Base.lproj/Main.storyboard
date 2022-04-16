@@ -542,7 +542,7 @@
                             <constraint firstItem="MNg-yg-Mod" firstAttribute="leading" secondItem="EpC-ox-7oY" secondAttribute="leading" id="11C-Cv-1le"/>
                             <constraint firstItem="EpC-ox-7oY" firstAttribute="leading" secondItem="qoo-KY-K7t" secondAttribute="leading" id="KWh-G7-bxf"/>
                             <constraint firstItem="MNg-yg-Mod" firstAttribute="top" secondItem="0dZ-ZS-8WB" secondAttribute="topMargin" constant="-16" id="NxW-Nb-XTX"/>
-                            <constraint firstItem="qoo-KY-K7t" firstAttribute="top" secondItem="EpC-ox-7oY" secondAttribute="bottom" constant="8" symbolic="YES" id="S2R-TO-mhd"/>
+                            <constraint firstItem="qoo-KY-K7t" firstAttribute="top" secondItem="EpC-ox-7oY" secondAttribute="bottom" constant="8" id="S2R-TO-mhd"/>
                             <constraint firstItem="MNg-yg-Mod" firstAttribute="leading" secondItem="0dZ-ZS-8WB" secondAttribute="leadingMargin" id="UW7-lp-mtv"/>
                             <constraint firstItem="EpC-ox-7oY" firstAttribute="top" secondItem="MNg-yg-Mod" secondAttribute="bottom" constant="8" symbolic="YES" id="dSo-Ob-Hfb"/>
                             <constraint firstItem="EpC-ox-7oY" firstAttribute="trailing" secondItem="qoo-KY-K7t" secondAttribute="trailing" id="kDO-eb-A9i"/>
@@ -555,7 +555,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKa-E8-KzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-297" y="551"/>
+            <point key="canvasLocation" x="-297.10144927536237" y="550.44642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Vj-bA-uJb">

@@ -13,6 +13,8 @@
 		CF4DC2A327F65DA400DDBA9C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DC2A227F65DA400DDBA9C /* LoginViewController.swift */; };
 		CF4DC2A527F6CAA000DDBA9C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4DC2A427F6CAA000DDBA9C /* RegisterViewController.swift */; };
 		CF6072D527EF17DE00AF3C50 /* habitatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */; };
+		CF6279A128107FFF00415D5E /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6279A028107FFF00415D5E /* UserInfoHeader.swift */; };
+		CF6279A32810803600415D5E /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6279A22810803600415D5E /* SettingsCell.swift */; };
 		CF81510727EC4D6200556F76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81510627EC4D6200556F76 /* AppDelegate.swift */; };
 		CF81510927EC4D6200556F76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81510827EC4D6200556F76 /* SceneDelegate.swift */; };
 		CF81510B27EC4D6200556F76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF81510A27EC4D6200556F76 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 		CF4DC2A227F65DA400DDBA9C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CF4DC2A427F6CAA000DDBA9C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CF6072D427EF17DE00AF3C50 /* habitatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitatViewController.swift; sourceTree = "<group>"; };
+		CF6279A028107FFF00415D5E /* UserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
+		CF6279A22810803600415D5E /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		CF81510327EC4D6200556F76 /* ImageRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF81510627EC4D6200556F76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF81510827EC4D6200556F76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				CFB45A282803F90000584CA6 /* SearchItem.swift */,
 				CFB45A2A2803F96B00584CA6 /* userFirebase.swift */,
 				CFB45A2C2803FA1B00584CA6 /* userService.swift */,
+				CF6279A028107FFF00415D5E /* UserInfoHeader.swift */,
+				CF6279A22810803600415D5E /* SettingsCell.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF4DC2A527F6CAA000DDBA9C /* RegisterViewController.swift in Sources */,
+				CF6279A128107FFF00415D5E /* UserInfoHeader.swift in Sources */,
 				CF81510B27EC4D6200556F76 /* ViewController.swift in Sources */,
 				CFB45A2D2803FA1B00584CA6 /* userService.swift in Sources */,
 				CFB45A272803DA8400584CA6 /* SettingsViewController.swift in Sources */,
@@ -262,6 +269,7 @@
 				CF81510927EC4D6200556F76 /* SceneDelegate.swift in Sources */,
 				617F7E2C27F157A600D2F4C1 /* HistoryViewController.swift in Sources */,
 				CFB45A252803DA4900584CA6 /* HelpViewController.swift in Sources */,
+				CF6279A32810803600415D5E /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

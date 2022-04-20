@@ -54,37 +54,51 @@ class SettingsViewController: UIViewController {
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return SettingsSection.allCases.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        guard let section = SettingsSection(rawValue: section) else {return 0}
+            
         switch section
         {
-            case 1: return 2
-            case 2: return 3
+            case.social: return SocialSection.allCases.count
+            case.communications: return CommunicationSection.allCases.count
             default: return 0
         }
     }
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let view = UIView()
-//        view.backgroundColor = .black
-//        let title = UILabel()
-//        title.font = UIFont.boldSystemFont(ofSize: 16)
-//        title.textColor = .white
-//        view.addSubview(title)
-//        title.translatesAutoresizingMaskIntoConstraints = false
-//        title.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-//        
-//    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .black
+        let title = UILabel()
+        title.font = UIFont.boldSystemFont(ofSize: 16)
+        title.textColor = .white
+        title.text = SettingsSection(rawValue: section)?.description        
+        view.addSubview(title)
+        title.translatesAutoresizingMaskIntoConstraints = false
+        title.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        title.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
+        return view
+        
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! SettingsCell
-       
-        switch indexPath.section
+        
+        guard let section = SettingsSection(rawValue: indexPath.section) else {return UITableViewCell()}
+
+        switch section
         {
-        case 1: cell.backgroundColor = .gray
-        case 2: cell.backgroundColor = .gray
-        default: break
+            case.social:
+                let social = SocialSection(rawValue: indexPath.row)
+                cell.textLabel?.text = social?.description
+            case.communications:
+                let communication = CommunicationSection(rawValue: indexPath.row)
+                cell.textLabel?.text = communication?.description
         }
         return cell
     }

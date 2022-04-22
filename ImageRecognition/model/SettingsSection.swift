@@ -6,6 +6,12 @@
 //
 
 
+//protocol choices which cell has a switch
+protocol SectionType: CustomStringConvertible{
+    var containSwitch: Bool {get}
+}
+
+
 //main emun for section choice
 enum SettingsSection: Int, CaseIterable, CustomStringConvertible{
     //swift auto assigns  count on causes starting at 0
@@ -22,7 +28,15 @@ enum SettingsSection: Int, CaseIterable, CustomStringConvertible{
 
 
 //main emun for section choice
-enum SocialSection: Int, CaseIterable, CustomStringConvertible{
+enum SocialSection: Int, CaseIterable, CustomStringConvertible, SectionType{
+    //switch protocal
+    var containSwitch: Bool{
+        switch self{
+        case.theme: return true
+        case.logOut: return true
+        }
+    }
+    
     case theme
     case logOut
     
@@ -35,7 +49,13 @@ enum SocialSection: Int, CaseIterable, CustomStringConvertible{
 }
     
     //main emun for section choice
-enum CommunicationSection: Int, CaseIterable, CustomStringConvertible{
+enum CommunicationSection: Int, CaseIterable, CustomStringConvertible, SectionType{
+    var containSwitch: Bool{
+        switch self{
+        case.reportCrashes: return true
+        case.notifications: return true
+        }
+    }
 
     case notifications
     case reportCrashes

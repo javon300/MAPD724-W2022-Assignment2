@@ -32,6 +32,7 @@ class habitatViewController: UIViewController {
     var details: String = ""
     
     var location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+   
     var querry = ""
     
     @Published var animalData: String = ""
@@ -71,7 +72,7 @@ class habitatViewController: UIViewController {
             readFromDatabase(name: "cat")
             
             // location
-            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            location = CLLocationCoordinate2D(latitude:  43.651070,longitude:  -79.347015)
             querry = "canada"
             
         }
@@ -80,7 +81,7 @@ class habitatViewController: UIViewController {
             readFromDatabase(name: "dog")
             
             // location
-            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            location = CLLocationCoordinate2D(latitude:  43.651070,longitude:  -79.347015)
             querry = "canada"
         }
         else if (name.contains("lion"))
@@ -88,7 +89,7 @@ class habitatViewController: UIViewController {
             readFromDatabase(name: "lion")
             
             // location
-            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            location = CLLocationCoordinate2D(latitude:  -30.559482,longitude: 22.937506)
             querry = "Africa"
         }
         else if (name.contains("tiger"))
@@ -96,7 +97,7 @@ class habitatViewController: UIViewController {
             readFromDatabase(name: "tiger")
             
             // location
-            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            location = CLLocationCoordinate2D(latitude: -30.55948,longitude: 22.937506)
             querry = "Africa"
         }
         else if (name.contains("alligator"))
@@ -112,7 +113,7 @@ class habitatViewController: UIViewController {
             readFromDatabase(name: "crocodile")
             
             // location
-            location = CLLocationCoordinate2D(latitude: 51.50007773,longitude: -0.1246402)
+            location = CLLocationCoordinate2D(latitude: 17.99702 ,longitude: -76.79358)
             querry = "Caribbean"
         }
         else if (name.contains("kangaroo"))
@@ -120,7 +121,7 @@ class habitatViewController: UIViewController {
             readFromDatabase(name: "kangaroo")
             
             // location
-            location = CLLocationCoordinate2D(latitude: -24.570000,longitude: 137.419998)
+            location = CLLocationCoordinate2D(latitude: -25.274398,longitude: 133.775136)
             querry = "Australia"
         }
         else
@@ -130,6 +131,7 @@ class habitatViewController: UIViewController {
             let about = "The image you entered is not a registered animal please upload a different picture of an animal"
             detailLabel.text = about
         }
+        getLocation(query: querry,locat_place: location)
     }
     
     
